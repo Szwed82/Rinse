@@ -663,7 +663,7 @@
 				<FontString name="$parentFilterText" inherits="GameFontHighlight" text="Filter" justifyH="CENTER">
 					<Anchors>
 						<Anchor point="BOTTOM">
-							<Offset x="-90" y="125"/>
+							<Offset x="-90" y="180"/>
 						</Anchor>
 					</Anchors>
 				</FontString>
@@ -1283,3 +1283,4 @@
 	<Frame name="RinseClassesDropDown" inherits="UIDropDownMenuTemplate" id="1" hidden="true"/>
 	<Frame name="RinseGroupsDropDown" inherits="UIDropDownMenuTemplate" id="2" hidden="true"/>
 </Ui>
+
