@@ -613,7 +613,7 @@
 
 	<!-- Options Frame -->
 	<Frame name="RinseOptionsFrame" parent="UIParent" movable="true" enableMouse="true" toplevel="true" frameStrata="DIALOG" hidden="true">
-		<Size x="400" y="660"/>
+		<Size x="400" y="710"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
 		</Anchors>
@@ -1191,6 +1191,25 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
+			
+			<CheckButton name="$parentFilterSnare" inherits="RinseOptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentFilterCurse" relativePoint="BOTTOMLEFT">
+						<Offset x="0" y="7"/>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(this:GetName().."Text"):SetText("Cure Slows (Hand of Freedom)")
+						this.tooltipText = "Check this to use Hand of Freedom on movement impairing effects."
+					</OnLoad>
+					<OnClick>
+						Rinse_ToggleFilter("Snare")
+						PlayClickSound()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
 			<Frame>
 				<Size x="60" y="25"/>
 				<Anchors>
